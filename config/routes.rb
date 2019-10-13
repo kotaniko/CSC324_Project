@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :collections
   #get 'slideshow/show'
   get "/show", to: "slideshow#show"
 
