@@ -1,0 +1,17 @@
+<h1>Photos</h1>
+
+<div class="container">
+  <% col_count = 0 %>
+  <% @photos.each do |photo| %>
+    <% if col_count % 4 == 0 %>
+      <div class="row">
+    <% end %>
+    <div class="col-sm-3">
+      <%= image_tag(photo[:picture], class: "img-thumbnail img-fluid", alt: photo[:picture]) %>
+    </div>
+    <% if col_count % 4 == 3 %>
+      </div>
+    <% end %>
+    <% col_count += 1 %>
+  <% end %>
+</div>

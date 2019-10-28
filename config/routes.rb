@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   #get 'album/album'
   get "/album", to: "album#album"
+  get "/album/photo", to: "album#photo"
 
   #get 'homepage/home'
 
