@@ -19,9 +19,10 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <!-- <%= link_to "gallery", root_path, id: "logo" %> -->
-        <p id="logo">gallery</p>
+        <h1 id="logo">gallery</h1>
         <nav>
           <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a class="skip-main" href="#main">Skip to main content</a></li> -->
             <li><%= link_to "Home",   root_path %></li>
             <li><%= link_to "Album",   album_path %></li>
             <li><%= link_to "Database_Table",   collections_path %></li>
@@ -30,7 +31,7 @@
         </nav>
       </div>
     </header>
-    <div class="container">
+    <div class="container" id="main">
       <%= yield %>
     </div>
   </body>
