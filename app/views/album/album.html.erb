@@ -11,7 +11,7 @@
     <div class="col-sm-3">
       <% albumName = album[:name] %>
       <% albumId = @albums.find_by(name: albumName) %>
-      <h5><%= albumName %></h5>
+      <h2><%= albumName %></h2>
       <% coverPhoto = Collection.find_by(name: albumName)[:picture] %>
       <%= link_to image_tag(coverPhoto, class: "img-thumbnail img-fluid", alt: albumName), album_photo_path(album_name: albumName)  %>
     </div>
