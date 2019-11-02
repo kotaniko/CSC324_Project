@@ -9,7 +9,7 @@
       <div class="row">
     <% end %>
     <div class="col-sm-3">
-      <%= image_tag(photo[:picture], class: "img-thumbnail img-fluid", alt: photo[:picture]) %>
+      <%= image_tag(photo[:picture], class: "img-thumbnail img-fluid", alt: photo[:picture]+" in "+photo[:name]) %>
     </div>
     <% if col_count % 4 == 3 %>
       </div>
