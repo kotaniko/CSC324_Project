@@ -4,7 +4,9 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    @collections = Collection.all.order(:name)
+    @collections = Collection.all
+    @album_names = Collection.select(:name).distinct
+    @all_pic_array = Dir.glob("*.{jpg,JPG}", base: "app/assets/images")
   end
 
   # GET /collections/1

@@ -30,3 +30,26 @@
 <br>
 
 <%= link_to 'New Collection', new_collection_path %>
+
+<p>Will implement the feature of modifying albums by selecting/unselecting images.</p>
+
+<%= form_with(model: Collection.new, local: true) do |form| %>
+  <%= form.label :"Album name" %><br>
+  <%= form.collection_select :name, Collection.select(:name).distinct, :id, :name, {:prompt => 'Please select the album'} %>
+  <%= form.submit "Show" %>
+<% end %>
+<div class="container">
+  <% col_count = 0 %>
+  <% @all_pic_array.each do |image| %>
+    <% if col_count % 4 == 0 %>
+      <div class="row">
+    <% end %>
+    <div class="col-sm-3">
+      <%= image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder") %>
+    </div>
+    <% if col_count % 4 == 3 %>
+      </div>
+    <% end %>
+    <% col_count += 1 %>
+  <% end %>
+</div>
