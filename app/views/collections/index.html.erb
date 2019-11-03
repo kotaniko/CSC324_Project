@@ -37,7 +37,7 @@
 
 <%= form_with(model: Collection.new, local: true) do |form| %>
   <%= form.label :name, "Album name" %>
-  <%= form.collection_select :collection, :name, Collection.select(:name).distinct, :name, :name, {:prompt => 'Please select the album'} %>
+  <%= form.collection_select :name, Collection.select(:name).distinct, :name, :name, {:prompt => 'Please select the album'} %>
   <%= form.submit "Show" %>
 <% end %>
 <div class="container">
