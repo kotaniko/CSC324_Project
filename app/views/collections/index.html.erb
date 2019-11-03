@@ -36,8 +36,8 @@
 <p>Will implement the feature of modifying albums by selecting/unselecting images.</p>
 
 <%= form_with(model: Collection.new, local: true) do |form| %>
-  <%= form.label :name, "Album name" %>
-  <%= form.collection_select :name, Collection.select(:name).distinct, :id, :name, {:prompt => 'Please select the album'} %>
+  <!-- <%= form.label :name, "Album name" %> -->
+  <%= form.collection_select :name, Collection.select(:name).distinct, :name, :name, {:prompt => 'Please select the album'} %>
   <%= form.submit "Show" %>
 <% end %>
 <div class="container">
