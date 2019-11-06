@@ -19,7 +19,7 @@
   <div class="field">
     <%= form.label :picture %>
     <!-- <%= form.text_field :picture, id: :collection_picture %> -->
-    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {:prompt => 'Please select the picture'}, id: :collection_name %>
+    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {:prompt => 'Please select the picture'}, id: :collection_picture %>
   </div>
 
   <div class="actions">
