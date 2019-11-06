@@ -12,13 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :collection_name %>
+    <%= form.label :name, "Select album" %>
+    <!-- <%= form.text_field :name, id: :collection_name %> -->
+    <%= form.collection_select :name, Collection.select(:name).distinct, :name, :name, {:prompt => 'Please select the album'}, id: :collection_name %>
   </div>
 
   <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture, id: :collection_picture %>
+    <%= form.label :picture, "Select picture" %>
+    <!-- <%= form.text_field :picture, id: :collection_picture %> -->
+    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, id: :collection_name %>
   </div>
 
   <div class="actions">

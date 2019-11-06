@@ -1,9 +1,20 @@
 <% @title="Home" %>
 
-<h1>Home</h1>
+<h1>Photos</h1>
 
-<div class="center jumbotron">
-  <h1>Welcome to My Gallery</h1>
-
-  <%= link_to "Go to Album!", 'album', class: "btn btn-lg btn-primary" %>
+<div class="container">
+  <% col_count = 0 %>
+  <% @all_pic_array.each do |image| %>
+    <% if col_count % 4 == 0 %>
+      <div class="row">
+    <% end %>
+    <div class="col-sm-3">
+      <%= image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder") %>
+      <p><%= image %></p>
+    </div>
+    <% if col_count % 4 == 3 %>
+      </div>
+    <% end %>
+    <% col_count += 1 %>
+  <% end %>
 </div>

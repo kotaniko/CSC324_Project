@@ -1,0 +1,28 @@
+<%= form_with(model: collection, local: true) do |form| %>
+  <% if collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
+
+      <ul>
+      <% collection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Enter new album name" %>
+    <%= form.text_field :name, id: :collection_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <!-- <%= form.text_field :picture, id: :collection_picture %> -->
+    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {:prompt => 'Please select the picture'}, id: :collection_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

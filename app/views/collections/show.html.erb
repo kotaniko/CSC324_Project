@@ -1,3 +1,5 @@
+<% @title="Show" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,6 +11,8 @@
   <strong>Picture:</strong>
   <%= @collection.picture %>
 </p>
+
+<%= image_tag(@collection.picture, class: "img-thumbnail img-fluid", alt: @collection.picture+" in show page") %>
 
 <%= link_to 'Edit', edit_collection_path(@collection) %> |
 <%= link_to 'Back', collections_path %>

@@ -1,5 +1,7 @@
-<h1>New Collection</h1>
+<% @title="New Album" %>
 
-<%= render 'form', collection: @collection %>
+<h1>New Album</h1>
+
+<%= render 'form_new', collection: @collection %>
 
 <%= link_to 'Back', collections_path %>
