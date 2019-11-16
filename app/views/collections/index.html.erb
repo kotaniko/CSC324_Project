@@ -20,15 +20,14 @@
         <td><%= link_to collection.picture, image_path(collection.picture) %></td>
         <td><%= link_to 'Show', collection %></td>
         <td><%= link_to 'Edit', edit_collection_path(collection) %></td>
-        <td><%= link_to 'Destroy', collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-
 </table>
 
 <br>
 
-<%= link_to 'New Collection', new_collection_path %>
+<%= link_to 'New Album', new_collection_path %>
 
 <br>

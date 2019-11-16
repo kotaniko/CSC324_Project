@@ -17,12 +17,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :picture %>
-    <!-- <%= form.text_field :picture, id: :collection_picture %> -->
-    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {:prompt => 'Please select the picture'}, id: :collection_picture %>
+    <%= form.label :picture, "Select a cover picture"%>
+    <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {:prompt => 'Please select a cover picture'}, id: :collection_picture %>
   </div>
 
+  <!--<div class="field">
+    <%= form.label :test, "test" %>
+    <%= form.check_box :picture, id: :collection_test %>
+  </div>-->
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create an album"%>
   </div>
 <% end %>
