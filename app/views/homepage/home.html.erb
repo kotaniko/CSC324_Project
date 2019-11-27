@@ -9,12 +9,16 @@
       <div class="row">
     <% end %>
     <div class="col-sm-3">
-      <%= image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder") %>
+      <%= link_to image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder"), image_path(image) %>
       <p><%= image %></p>
     </div>
     <% if col_count % 4 == 3 %>
       </div>
     <% end %>
     <% col_count += 1 %>
+  <% end %>
+
+  <% @all_pic_array.each do |image| %>
+    <%= link_to image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder"), image_path(image) %>
   <% end %>
 </div>
