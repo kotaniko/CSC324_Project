@@ -17,8 +17,4 @@
     <% end %>
     <% col_count += 1 %>
   <% end %>
-
-  <% @all_pic_array.each do |image| %>
-    <%= link_to image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder"), image_path(image) %>
-  <% end %>
 </div>
