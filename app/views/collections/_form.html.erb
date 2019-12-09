@@ -23,6 +23,11 @@
     <%= form.select :picture, Dir.glob("*.{jpg,JPG}", base: "app/assets/images").map{|u| [u, u]}, {}, id: :collection_picture %>
   </div>
 
+  <div class="field">
+    <%= form.label :description, "Enter description" %>
+    <%= form.text_field :description, id: :collection_description %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Updata Album"%>
   </div>

@@ -12,6 +12,11 @@
   <%= @collection.picture %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @collection.description %>
+</p>
+
 <%= image_tag(@collection.picture, class: "img-thumbnail img-fluid", alt: @collection.picture+" in show page") %>
 
 <%= link_to 'Edit', edit_collection_path(@collection) %> |

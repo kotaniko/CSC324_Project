@@ -4,4 +4,4 @@
 <p>This page shows slideshows.</p>
 
 <h2>Photo of the Visit</h2>
-<%= image_tag("#{@rand_pic}", class: "img-thumbnail img-fluid", alt: "#{@rand_pic}"+", randomly selected") %>
+<%= link_to image_tag(@rand_pic, class: "img-thumbnail img-fluid", alt: @rand_pic_desc), image_path(@rand_pic) %>

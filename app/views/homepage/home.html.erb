@@ -5,12 +5,19 @@
 <div class="container">
   <% col_count = 0 %>
   <% @all_pic_array.each do |image| %>
+    <% if Collection.exists?(:picture => image) %>
+      <% image_record = Collection.find_by(picture: image) %>
+      <% image_desc = image_record.description %>
+    <% else %>
+      <% image_desc = 'No description' %>
+    <% end %>
+
     <% if col_count % 4 == 0 %>
       <div class="row">
     <% end %>
     <div class="col-sm-3">
-      <%= link_to image_tag(image, class: "img-thumbnail img-fluid", alt: image+" in a folder"), image_path(image) %>
-      <p><%= image %></p>
+      <%= link_to image_tag(image, class: "img-thumbnail img-fluid", alt: image_desc), image_path(image) %>
+      <p><%= image %><br><%= image_desc %></p>
     </div>
     <% if col_count % 4 == 3 %>
       </div>
