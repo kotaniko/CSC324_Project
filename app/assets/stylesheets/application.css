@@ -13,4 +13,20 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Caveat|Open+Sans|Roboto+Mono&display=swap');
 
+.font_handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.font_display {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.font_sanserif {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#nav_bar_font {
+  font-size: 2em;
+}
