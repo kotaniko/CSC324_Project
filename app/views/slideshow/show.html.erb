@@ -1,7 +1,9 @@
 <% @title="Slideshow" %>
 
 <h1 class="font_handwriting">Slideshow</h1>
-<p>This page shows slideshows.</p>
+
+<p>This page shows a random picture in the <i>app/assets/images</i> folder. Enjoy a variety of photos you have!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lacus varius metus porttitor dapibus. Aenean in condimentum erat. Sed vehicula sem justo, ac ultricies dui sollicitudin ac. Nulla et nunc sodales, eleifend eros at, elementum nulla. Nulla tincidunt arcu eu urna condimentum, eget iaculis purus tristique. Proin vitae sapien quis tortor efficitur sollicitudin. Donec diam orci, elementum vitae lacinia vitae, ullamcorper eget ligula. Mauris luctus sit amet ante nec bibendum. Donec tristique porttitor tristique.</p>
 
 <h2 class="font_sanserif">Photo of the Visit</h2>
 <%= link_to image_tag(@rand_pic, class: "img-thumbnail img-fluid", alt: @rand_pic_desc), image_path(@rand_pic) %>

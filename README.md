@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+One functionality that is worth taking a look at is on the slideshow page. This page displays an image randomly selected from the *app/assets/images* folder. The selection of the picture occurs every time the site is visited, so users encounter a different image every time. The implementation of this functionality includes fetching data from database, getting jpeg files in the specified folder, choosing a random picture, and testing the randomness. Other functionalities such as managing albums, showing pictures and albums, and forms to modify data in database require knowledge of Active Record, Rails, Ruby, CSS, and HTML. This individual project successfully integrates multiple aspects of web technologies and provide online photo gallery.
